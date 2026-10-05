@@ -1,0 +1,370 @@
+{
+  "Infos": {
+    "BlocksImage": {
+      "Type": "Image",
+      "Path": "Image/Item/Blocks.png",
+      "Preload": false
+    },
+
+    "TitleLogoImage": {
+      "Type": "Image",
+      "Path": "Image/Logo/TitleLogo.png",
+      "Preload": true
+    },
+
+    "GameClearLogoImage": {
+      "Type": "Image",
+      "Path": "Image/Logo/GameClearLogo.png",
+      "Preload": true
+    },
+
+    "GameOverLogoImage": {
+      "Type": "Image",
+      "Path": "Image/Logo/GameOverLogo.png",
+      "Preload": true
+    },
+
+    "MenuLogoImage": {
+      "Type": "Image",
+      "Path": "Image/Logo/MenuLogo.png",
+      "Preload": true
+    },
+
+    "TitleBackImage": {
+      "Type": "Image",
+      "Path": "Image/Logo/TitleBackImage.png",
+      "Preload": true
+    },
+
+    "BreathAttackImage": {
+      "Type": "Image",
+      "Path": "Image/Effect/Breath.png",
+      "Preload": true
+    },
+
+    "PlayerHPImage": {
+      "Type": "Image",
+      "Path": "Image/UI/PlayerHP.png",
+      "Preload": true
+    },
+
+    "CrossHairImage": {
+      "Type": "Image",
+      "Path": "Image/UI/CrossHair.png",
+      "Preload": true
+    },
+
+    "EnemyDragonModel": {
+      "Type": "Model",
+      "Path": "Model/Dragon/Dragon.mv1",
+      "Preload": false
+    },
+
+
+    "BlocksJson": {
+      "Type": "Json",
+      "Path": "Json/Blocks.json",
+      "Preload": true
+    },
+
+    "TitleJson": {
+      "Type": "Json",
+      "Path": "Json/Scene/Title.json",
+      "Preload": true
+    },
+
+    "GameOverJson": {
+      "Type": "Json",
+      "Path": "Json/Scene/GameOver.json",
+      "Preload": true
+    },
+
+    "GameClearJson": {
+      "Type": "Json",
+      "Path": "Json/Scene/GameClear.json",
+      "Preload": true
+    },
+
+    "MenuJson": {
+      "Type": "Json",
+      "Path": "Json/Scene/Menu.json",
+      "Preload": true
+    },
+
+    "CubeTemplateJson": {
+      "Type": "Json",
+      "Path": "Json/CubeTemplate.json",
+      "Preload": true
+    },
+
+    "PlayerJson": {
+      "Type": "Json",
+      "Path": "Json/Player/Player.json",
+      "Preload": true
+    },
+
+    "PlayerModelJson": {
+      "Type": "Json",
+      "Path": "Json/Player/PlayerModel.json",
+      "Preload": true
+    },
+
+    "PlayerSkinJson": {
+      "Type": "Json",
+      "Path": "Json/Player/PlayerSkin.json",
+      "Preload": true
+    },
+
+    "ButtonJson": {
+      "Type": "Json",
+      "Path": "Json/Button.json",
+      "Preload": true
+    },
+
+    "PlayerAnimationJson": {
+      "Type": "Json",
+      "Path": "Json/Player/PlayerAnimation.json",
+      "Preload": true
+    },
+
+    "EnemyDragonJson": {
+      "Type": "Json",
+      "Path": "Json/Enemy/Dragon/Dragon.json",
+      "Preload": true
+    },
+
+    "DragonAnimationJson": {
+      "Type": "Json",
+      "Path": "Json/Enemy/Dragon/DragonAnimation.json",
+      "Preload": true
+    },
+
+    "EnemyDragonActionJson": {
+      "Type": "Json",
+      "Path": "Json/Enemy/Dragon/DragonAction.json",
+      "Preload": true
+    },
+
+    "EnemyDragonActionFlyMoveJson": {
+      "Type": "Json",
+      "Path": "Json/Enemy/Dragon/Action/FlyMove.json",
+      "Preload": true
+    },
+
+    "EnemyDragonActionFlyMoveBreathAttackJson": {
+      "Type": "Json",
+      "Path": "Json/Enemy/Dragon/Action/FlyMoveBreathAttack.json",
+      "Preload": true
+    },
+
+    "EnemyDragonActionLandingJson": {
+      "Type": "Json",
+      "Path": "Json/Enemy/Dragon/Action/Landing.json",
+      "Preload": true
+    },
+
+    "EnemyDragonActionLandingAttackJson": {
+      "Type": "Json",
+      "Path": "Json/Enemy/Dragon/Action/LandingAttack.json",
+      "Preload": true
+    },
+
+    "EnemyDragonActionTakeFlightJson": {
+      "Type": "Json",
+      "Path": "Json/Enemy/Dragon/Action/TakeFlight.json",
+      "Preload": true
+    },
+
+    "EnemyDragonActionPlayerAttackJson": {
+      "Type": "Json",
+      "Path": "Json/Enemy/Dragon/Action/PlayerAttack.json",
+      "Preload": true
+    },
+
+    "EnemyDragonModelJson": {
+      "Type": "Json",
+      "Path": "Json/Enemy/Dragon/DragonModel.json",
+      "Preload": true
+    },
+
+
+    "ToolsJson": {
+      "Type": "Json",
+      "Path": "Json/Tool/Tools.json",
+      "Preload": true
+    },
+
+    "CreateStageRuleJson": {
+      "Type": "Json",
+      "Path": "Json/Stage/CreateStageRule.json",
+      "Preload": true
+    },
+
+    "TitleBGM": {
+      "Type": "Sound2D",
+      "Path": "Sound/TitleBGM.mp3",
+
+      "Preload": true,
+      "Loop": true,
+
+      "SoundType": "BGM",
+
+      "MaxVolume": 0.5,
+      "MaxPlayNum": 1,
+      "Pitch": 0.0
+    },
+
+    "SkinBGM": {
+      "Type": "Sound2D",
+      "Path": "Sound/SkinBGM.mp3",
+
+      "Preload": true,
+      "Loop": true,
+
+      "SoundType": "BGM",
+
+      "MaxVolume": 0.5,
+      "MaxPlayNum": 1,
+      "Pitch": 0.0
+    },
+
+    "GameClearBGM": {
+      "Type": "Sound2D",
+      "Path": "Sound/GameClearBGM.mp3",
+
+      "Preload": true,
+      "Loop": false,
+
+      "SoundType": "BGM",
+
+      "MaxVolume": 0.5,
+      "MaxPlayNum": 1,
+      "Pitch": 0.0
+    },
+
+    "GameOverBGM": {
+      "Type": "Sound2D",
+      "Path": "Sound/GameOverBGM.mp3",
+
+      "Preload": true,
+      "Loop": false,
+
+      "SoundType": "BGM",
+
+      "MaxVolume": 0.5,
+      "MaxPlayNum": 1,
+      "Pitch": 0.0
+    },
+
+    "EnterSE": {
+      "Type": "Sound2D",
+      "Path": "Sound/EnterSE.mp3",
+
+      "Preload": true,
+      "Loop": false,
+
+      "SoundType": "SE",
+
+      "MaxVolume": 0.7,
+      "MaxPlayNum": 5,
+      "Pitch": 0.0
+    },
+
+    "HitSE": {
+      "Type": "Sound2D",
+      "Path": "Sound/HitSE.mp3",
+
+      "Preload": true,
+      "Loop": false,
+
+      "SoundType": "SE",
+
+      "MaxVolume": 0.7,
+      "MaxPlayNum": 5,
+      "Pitch": 0.0
+    },
+
+    "AttackSE": {
+      "Type": "Sound2D",
+      "Path": "Sound/AttackSE.mp3",
+
+      "Preload": true,
+      "Loop": false,
+
+      "SoundType": "SE",
+
+      "MaxVolume": 0.7,
+      "MaxPlayNum": 5,
+      "Pitch": 0.0
+    },
+
+    "MoveSelectSE": {
+      "Type": "Sound2D",
+      "Path": "Sound/MoveSelectSE.mp3",
+
+      "Preload": true,
+      "Loop": false,
+
+      "SoundType": "SE",
+
+      "MaxVolume": 0.7,
+      "MaxPlayNum": 10,
+      "Pitch": 0.0
+    },
+
+    "PlayerVS": {
+      "Type": "Shader",
+      "Path": "Shader/PlayerVS.cso",
+      "ShaderType": "Vertex",
+      "Preload": true
+    },
+    "PlayerPS": {
+      "Type": "Shader",
+      "Path": "Shader/PlayerPS.cso",
+      "ShaderType": "Pixel",
+      "Preload": true
+    },
+
+    "BlocksVS": {
+      "Type": "Shader",
+      "Path": "Shader/BlocksVS.cso",
+      "ShaderType": "Vertex",
+      "Preload": true
+    },
+    "BlocksPS": {
+      "Type": "Shader",
+      "Path": "Shader/BlocksPS.cso",
+      "ShaderType": "Pixel",
+      "Preload": true
+    },
+
+    "DragonVS": {
+      "Type": "Shader",
+      "Path": "Shader/DragonVS.cso",
+      "ShaderType": "Vertex",
+      "Preload": true
+    },
+    "DragonPS": {
+      "Type": "Shader",
+      "Path": "Shader/DragonPS.cso",
+      "ShaderType": "Pixel",
+      "Preload": true
+    },
+
+    "CanvasPS": {
+      "Type": "Shader",
+      "Path": "Shader/Canvas.cso",
+      "ShaderType": "Pixel",
+      "Preload": true
+    },
+
+    "DefaultFont": {
+      "Type": "Font",
+      "Path": "Font/PixelMplus12.ttf",
+      "Name": "PixelMplus12",
+      "Size": 32,
+      "Thick": 3,
+      "Preload": true
+    }
+  }
+}

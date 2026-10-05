@@ -1,0 +1,122 @@
+{
+  "DefaultScale": 1.0,
+
+  "DamageDelay": 0.5,
+
+  "Status": {
+    "Health": 100.0,
+    "MaxHealth": 100.0
+  },
+
+  "Collider": [
+    {
+      "Type": "Triangle",
+      "BornNumber": [ 57, 60, 64 ]
+    },
+    {
+      "Type": "Triangle",
+      "BornNumber": [ 57, 64, 72 ]
+    },
+    {
+      "Type": "Triangle",
+      "BornNumber": [ 57, 72, 68 ]
+    },
+    {
+      "Type": "Triangle",
+      "BornNumber": [ 57, 68, 73 ]
+    },
+    {
+      "Type": "Triangle",
+      "BornNumber": [ 57, 73, 55 ]
+    },
+    {
+      "Type": "Triangle",
+      "BornNumber": [ 76, 79, 83 ]
+    },
+    {
+      "Type": "Triangle",
+      "BornNumber": [ 76, 83, 91 ]
+    },
+    {
+      "Type": "Triangle",
+      "BornNumber": [ 76, 91, 87 ]
+    },
+    {
+      "Type": "Triangle",
+      "BornNumber": [ 76, 87, 92 ]
+    },
+    {
+      "Type": "Triangle",
+      "BornNumber": [ 76, 92, 74 ]
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 2, 10 ],
+      "Radius": 50.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 10, 12 ],
+      "Radius": 30.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 14, 12 ],
+      "Radius": 30.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 2, 4 ],
+      "Radius": 25.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 4, 7 ],
+      "Radius": 25.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 2, 94 ],
+      "Radius": 25.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 2, 108 ],
+      "Radius": 25.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 94, 95 ],
+      "Radius": 25.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 108, 109 ],
+      "Radius": 25.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 10, 28 ],
+      "Radius": 25.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 10, 42 ],
+      "Radius": 25.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 28, 29 ],
+      "Radius": 25.0
+    },
+    {
+      "Type": "Capsule",
+      "BornNumber": [ 42, 43 ],
+      "Radius": 25.0
+    }
+  ],
+
+  "Model": "EnemyDragonModelJson",
+
+  "ActionPattern": "EnemyDragonActionJson"
+}

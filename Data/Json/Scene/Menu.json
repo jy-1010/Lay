@@ -1,0 +1,90 @@
+{
+  "Resource": [
+    "TitleLogoImage",
+    "TitleBackImage"
+  ],
+
+  "Logo": {
+    "List": [
+      {
+        "Name": "BackImage",
+        "Image": "TitleBackImage",
+        "Layer": 0,
+        "Position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "Name": "MenuLogo",
+        "Image": "MenuLogoImage",
+        "Layer": 1,
+        "Position": {
+          "x": 0.5,
+          "y": 0.2
+        }
+      }
+    ]
+  },
+  "Buttons": {
+    "List": [
+      {
+        "Name": "Return",
+        "String": {
+          "Font": "DefaultFont",
+          "DrawString": {
+            "Japanese": "戻る",
+            "Englesh": "Return"
+          }
+        },
+        "Layer": 2,
+        "NextScene": "Pop",
+        "SelectIndex": 0,
+        "Rect": {
+          "Left": 0.31,
+          "Top": 0.41,
+          "Right": 0.69,
+          "Bottom": 0.49
+        }
+      },
+      {
+        "Name": "Setting",
+        "String": {
+          "Font": "DefaultFont",
+          "DrawString": {
+            "Japanese": "設定",
+            "Englesh": "Setting"
+          }
+        },
+        "Layer": 2,
+        "NextScene": "Setting",
+        "SelectIndex": 1,
+        "Rect": {
+          "Left": 0.31,
+          "Top": 0.51,
+          "Right": 0.69,
+          "Bottom": 0.59
+        }
+      },
+      {
+        "Name": "Go Title",
+        "String": {
+          "Font": "DefaultFont",
+          "DrawString": {
+            "Japanese": "タイトルに戻る",
+            "Englesh": "Go Title"
+          }
+        },
+        "Layer": 2,
+        "NextScene": "Title",
+        "SelectIndex": 2,
+        "Rect": {
+          "Left": 0.31,
+          "Top": 0.61,
+          "Right": 0.69,
+          "Bottom": 0.69
+        }
+      }
+    ]
+  }
+}

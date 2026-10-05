@@ -1,0 +1,52 @@
+{
+    "Default": "Steve",
+    "Info": [
+        {
+            "Name": "Steve",
+            "Path": "Steve.png"
+        },
+        {
+            "Name": "Alex",
+            "Path": "Alex.png"
+        },
+        {
+            "Name": "PigMan",
+            "Path": "PigMan.png"
+        },
+        {
+            "Name": "Chicken",
+            "Path": "Chicken.png"
+        },
+        {
+            "Name": "EnderMan",
+            "Path": "EnderMan.png"
+        },
+        {
+            "Name": "Zangief",
+            "Path": "Zangief.png"
+        },
+        {
+            "Name": "Zombie",
+            "Path": "Zombie.png"
+        },
+        {
+            "Name": "Ikeda",
+            "Path": "Ikeda.png"
+        },
+        {
+            "Name": "tekitou",
+            "Path": "tekitou.png"
+        },
+        {
+            "Name": "zyunzyunzyuyuyz",
+            "Path": "zyunzyunzyuyuyz.png"
+        },
+        {
+            "Name": "Goodkun",
+            "Path": "Goodkun.png"
+        }
+    ],
+    "Preload": true,
+    "RootPath": "Image/PlayerSkin/",
+    "Type": "Image"
+}

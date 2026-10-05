@@ -1,0 +1,71 @@
+{
+	"Resource": [
+		"GameClearLogoImage",
+		"TitleBackImage"
+	],
+
+	"Logo": {
+		"List": [
+			{
+				"Name": "BackImage",
+				"Image": "TitleBackImage",
+				"Layer": 0,
+				"Position": {
+					"x": 0.5,
+					"y": 0.5
+				}
+			},
+			{
+				"Name": "GameClearLogoImage",
+				"Image": "GameClearLogoImage",
+				"Layer": 1,
+				"Position": {
+					"x": 0.5,
+					"y": 0.2
+				}
+			}
+		]
+	},
+	"Buttons": {
+		"List": [
+			{
+				"Name": "Go Title",
+				"String": {
+					"Font": "DefaultFont",
+					"DrawString": {
+						"Japanese": "タイトルに戻る",
+						"Englesh": "Go Title"
+					}
+				},
+				"Layer": 2,
+				"NextScene": "Title",
+				"SelectIndex": 0,
+				"Rect": {
+					"Left": 0.31,
+					"Top": 0.61,
+					"Right": 0.69,
+					"Bottom": 0.69
+				}
+			},
+			{
+				"Name": "Exit",
+				"String": {
+					"Font": "DefaultFont",
+					"DrawString": {
+						"Japanese": "終了",
+						"Englesh": "Exit Game"
+					}
+				},
+				"Layer": 2,
+				"NextScene": "Exit",
+				"SelectIndex": 1,
+				"Rect": {
+					"Left": 0.31,
+					"Top": 0.71,
+					"Right": 0.69,
+					"Bottom": 0.79
+				}
+			}
+		]
+	}
+}

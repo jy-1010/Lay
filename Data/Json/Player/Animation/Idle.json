@@ -1,0 +1,137 @@
+{
+  "Name": "Idle",
+
+  "Priority": 0,
+  "Layer": 0,
+
+  "Loop": true,
+  "Interruptible": true,
+
+  "BlendTime": 0.25,
+
+  "Mask": [
+    "Head",
+    "Body",
+    "RightArm",
+    "LeftArm",
+    "RightLeg",
+    "LeftLeg"
+  ],
+
+  "Length": 2.0,
+
+  "KeyFrames": [
+    {
+      "Time": 0.0,
+
+      "Parts": {
+        "Head": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "Body": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "RightArm": {
+          "Rotation": {
+            "x": 2,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "LeftArm": {
+          "Rotation": {
+            "x": -2,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }
+    },
+
+    {
+      "Time": 1.0,
+
+      "Parts": {
+        "Head": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "Body": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "RightArm": {
+          "Rotation": {
+            "x": -2,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "LeftArm": {
+          "Rotation": {
+            "x": 2,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }
+    },
+    {
+      "Time": 2.0,
+
+      "Parts": {
+        "Head": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "Body": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "RightArm": {
+          "Rotation": {
+            "x": 2,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "LeftArm": {
+          "Rotation": {
+            "x": -2,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "RenderTemplate": "CubeTemplateJson",
+  "AnimationTemplate": "PlayerAnimationJson",
+  "TextureSize": {
+    "x": 64,
+    "y": 64
+  },
+
+  "Shader": {
+    "VS": "PlayerVS",
+    "PS": "PlayerPS"
+  },
+
+  "RootPart": "Body",
+
+  "Parts": [
+    {
+      "Name": "Head",
+      "Parent": "Body",
+
+      "Affect": {
+        "IsRot": false,
+        "IsPos": true
+      },
+
+      "Pivot": {
+        "x": 0,
+        "y": 24,
+        "z": 0
+      },
+
+      "Cubes": [
+        {
+          "Offset": {
+            "x": 0,
+            "y": 4,
+            "z": 0
+          },
+
+          "PixelSize": {
+            "x": 8,
+            "y": 8,
+            "z": 8
+          },
+
+          "UV": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "Body",
+      "Parent": "",
+
+      "Affect": {
+        "IsRot": false,
+        "IsPos": false
+      },
+
+      "Pivot": {
+        "x": 0,
+        "y": 12,
+        "z": 0
+      },
+
+      "Cubes": [
+        {
+          "Offset": {
+            "x": 0,
+            "y": 6,
+            "z": 0
+          },
+
+          "PixelSize": {
+            "x": 8,
+            "y": 12,
+            "z": 4
+          },
+
+          "UV": {
+            "x": 0,
+            "y": 16
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "RightArm",
+      "Parent": "Body",
+
+      "Affect": {
+        "IsRot": true,
+        "IsPos": true
+      },
+
+      "Pivot": {
+        "x": 4,
+        "y": 24,
+        "z": 0
+      },
+
+      "Cubes": [
+        {
+          "Offset": {
+            "x": 2,
+            "y": -6,
+            "z": 0
+          },
+
+          "PixelSize": {
+            "x": 4,
+            "y": 12,
+            "z": 4
+          },
+
+          "UV": {
+            "x": 0,
+            "y": 32
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "LeftArm",
+      "Parent": "Body",
+
+      "Affect": {
+        "IsRot": true,
+        "IsPos": true
+      },
+
+      "Pivot": {
+        "x": -4,
+        "y": 24,
+        "z": 0
+      },
+
+      "Cubes": [
+        {
+          "Offset": {
+            "x": -2,
+            "y": -6,
+            "z": 0
+          },
+
+          "PixelSize": {
+            "x": 4,
+            "y": 12,
+            "z": 4
+          },
+
+          "UV": {
+            "x": 32,
+            "y": 32
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "RightLeg",
+      "Parent": "Body",
+
+      "Affect": {
+        "IsRot": false,
+        "IsPos": false
+      },
+
+      "Pivot": {
+        "x": 0,
+        "y": 12,
+        "z": 0
+      },
+
+      "Cubes": [
+        {
+          "Offset": {
+            "x": 2,
+            "y": -6,
+            "z": 0
+          },
+
+          "PixelSize": {
+            "x": 4,
+            "y": 12,
+            "z": 4
+          },
+
+          "UV": {
+            "x": 0,
+            "y": 48
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "LeftLeg",
+      "Parent": "Body",
+
+      "Affect": {
+        "IsRot": false,
+        "IsPos": false
+      },
+
+      "Pivot": {
+        "x": 0,
+        "y": 12,
+        "z": 0
+      },
+
+      "Cubes": [
+        {
+          "Offset": {
+            "x": -2,
+            "y": -6,
+            "z": 0
+          },
+
+          "PixelSize": {
+            "x": 4,
+            "y": 12,
+            "z": 4
+          },
+
+          "UV": {
+            "x": 32,
+            "y": 48
+          }
+        }
+      ]
+    }
+  ]
+}

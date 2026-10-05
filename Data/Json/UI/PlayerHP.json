@@ -1,0 +1,36 @@
+{
+  "TextureSize": 128,
+
+  "List": [
+    {
+      "Rect": {
+        "Left": 0,
+        "Right": 64,
+        "Top": 0,
+        "Bottom": 64
+      },
+      "Priority": 2,
+      "HP": 2
+    },
+    {
+      "Rect": {
+        "Left": 64,
+        "Right": 128,
+        "Top": 0,
+        "Bottom": 64
+      },
+      "Priority": 1,
+      "HP": 1
+    },
+    {
+      "Rect": {
+        "Left": 0,
+        "Right": 64,
+        "Top": 64,
+        "Bottom": 128
+      },
+      "Priority": 0,
+      "HP": 0
+    }
+  ]
+}

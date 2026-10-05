@@ -1,0 +1,63 @@
+{
+  "Graphics": {
+    "RenderDistance": {
+      "Default": 8,
+      "SettingList": [
+        2,
+        4,
+        6,
+        8,
+        12,
+        14,
+        16
+      ]
+    },
+    "ScreenMode": {
+      "Default": "Window",
+      "SettingList": [
+        "Window",
+        "FullScreen"
+      ]
+    },
+    "FieldOfView": {
+      "Default": 70,
+      "Min": 30,
+      "Max": 110
+    },
+    "Brightness": {
+      "Default": 1.0,
+      "Min": 0.0,
+      "Max": 2.0
+    },
+    "VSync": {
+      "Default": true
+    }
+  },
+  "Audio": {
+    "MasterVolume": {
+      "Default": 1.0,
+      "Min": 0.0,
+      "Max": 1.0
+    },
+    "BGMVolume": {
+      "Default": 0.7,
+      "Min": 0.0,
+      "Max": 1.0
+    },
+    "SEVolume": {
+      "Default": 0.7,
+      "Min": 0.0,
+      "Max": 1.0
+    }
+  },
+  "Controls": {
+    "MouseSensitivity": {
+      "Default": 1.0,
+      "Min": 0.1,
+      "Max": 5.0
+    },
+    "InvertY": {
+      "Default": false
+    }
+  }
+}

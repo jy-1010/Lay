@@ -1,0 +1,29 @@
+{
+  "Speed": 6.0,
+  "FlyTime": 10.0,
+
+  "Duration": 6.0,
+  "Radius": 5.0,
+  "DrawEffectNum": 30,
+  "EffectSpeed": 2.0,
+
+  "EffectImageKey": "BreathAttackImage",
+  "TextureSize": {
+    "x": 32,
+    "y": 16
+  },
+  "Rect": {
+    "Area": {
+      "Left": 0,
+      "Top": 0,
+      "Right": 16,
+      "Bottom": 16
+    },
+    "Ball": {
+      "Left": 16,
+      "Top": 0,
+      "Right": 32,
+      "Bottom": 16
+    }
+  }
+}

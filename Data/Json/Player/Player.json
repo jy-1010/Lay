@@ -1,0 +1,39 @@
+{
+  "PixelNum": 16,
+
+  "DefaultScale": 1.8,
+
+  "HeadHeight": 1.6,
+
+  "Collision": {
+    "Width": 0.6,
+    "Height": 1.8,
+    "Depth": 0.6
+  },
+
+  "Status": {
+    "Health": 20.0,
+    "MaxHealth": 20.0
+  },
+
+  "Reach": {
+    "Block": 4.5,
+    "Entity": 3.0
+  },
+
+  "Move": {
+    "WalkSpeed": 4.3,
+    "SprintSpeed": 5.6,
+    "JumpVelocity": 0.42
+  },
+
+  "Damage": {
+    "Sword": 3.0,
+    "Arrow": 8.0
+  },
+
+  "DamageDeray": 1.0,
+
+  "Model": "PlayerModelJson"
+
+}

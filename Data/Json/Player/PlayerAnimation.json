@@ -1,0 +1,29 @@
+{
+  "RootPath": "Json/Player/Animation/",
+  "Preload": true,
+
+  "DefaultAnimation": "Idle",
+
+  "Animations": [
+    {
+      "Name": "Idle",
+      "Path": "Idle.json"
+    },
+    {
+      "Name": "TPose",
+      "Path": "TPose.json"
+    },
+    {
+      "Name": "Walk",
+      "Path": "Walk.json"
+    },
+    {
+      "Name": "Swing",
+      "Path": "Swing.json"
+    },
+    {
+      "Name": "Dash",
+      "Path": "Dash.json"
+    }
+  ]
+}

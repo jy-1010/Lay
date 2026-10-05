@@ -1,0 +1,31 @@
+{
+  "Type": [ "None", "Pickaxe", "Axe", "Shovel", "Hoe", "Sword", "Shield" ],
+  "Level": [ "Wood", "Stone", "Copper", "Iron", "Diamond", "Netherite", "Gold" ],
+  "MiningSpeed": [
+    { "Wood": 2.0 },
+    { "Stone": 4.0 },
+    { "Copper": 5.0 },
+    { "Iron": 6.0 },
+    { "Diamond": 8.0 },
+    { "Netherite": 9.0 },
+    { "Gold": 12.0 }
+  ],
+  "Durability": [
+    { "Wood": 60.0 },
+    { "Stone": 132.0 },
+    { "Copper": 191.0 },
+    { "Iron": 251.0 },
+    { "Diamond": 1562.0 },
+    { "Netherite": 2031.0 },
+    { "Gold": 33.0 }
+  ],
+  "SpecialAction": [
+    { "None": [ "None" ] },
+    { "Pickaxe": [ "None" ] },
+    { "Axe": [ "Peel" ] },
+    { "Shovel": [ "ChangeRoad" ] },
+    { "Hoe": [ "Plow" ] },
+    { "Sword": [ "None" ] },
+    { "Shield": [ "Shield" ] }
+  ]
+}

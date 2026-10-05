@@ -1,0 +1,107 @@
+{
+  "StartId": 1,
+
+  "Pattern": [
+    {
+      "Id": 1,
+      "Name": "FlyMove",
+      "Json": "EnemyDragonActionFlyMoveJson",
+      "Duration": 5,
+      "Next": [
+        {
+          "Id": 1,
+          "Weight": 20
+
+        },
+        {
+          "Id": 3,
+          "Weight": 20
+        },
+        {
+          "Id": 6,
+          "Weight": 40
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Name": "FlyMoveBreathAttack",
+      "Json": "EnemyDragonActionFlyMoveBreathAttackJson",
+      "Duration": 5,
+      "Next": [
+        {
+          "Id": 1,
+          "Weight": 80
+        },
+        {
+          "Id": 3,
+          "Weight": 20
+        }
+      ]
+    },
+    {
+      "Id": 3,
+      "Name": "Landing",
+      "Json": "EnemyDragonActionLandingJson",
+      "Duration": 10,
+      "Next": [
+        {
+          "Id": 3,
+          "Weight": 10
+        },
+        {
+          "Id": 5,
+          "Weight": 70
+        }
+      ]
+    },
+    {
+      "Id": 4,
+      "Name": "LandingAttack",
+      "Json": "EnemyDragonActionLandingAttackJson",
+      "Duration": 3,
+      "Next": [
+        {
+          "Id": 3,
+          "Weight": 90
+        },
+        {
+          "Id": 5,
+          "Weight": 10
+        }
+      ]
+    },
+    {
+      "Id": 5,
+      "Name": "TakeFlight",
+      "Json": "EnemyDragonActionTakeFlightJson",
+      "Duration": 10,
+      "Next": [
+        {
+          "Id": 1,
+          "Weight": 80
+        },
+        {
+          "Id": 6,
+          "Weight": 10
+        }
+      ]
+    },
+    {
+      "Id": 6,
+      "Name": "PlayerAttack",
+      "Json": "EnemyDragonActionPlayerAttackJson",
+      "Duration": 12,
+      "Next": [
+        {
+          "Id": 1,
+          "Weight": 80
+        },
+        {
+          "Id": 3,
+          "Weight": 20
+        }
+      ]
+    }
+  ]
+}

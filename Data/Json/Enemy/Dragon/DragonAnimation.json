@@ -1,0 +1,94 @@
+{
+  "Infos": [
+    {
+      "Id": 0,
+      "Name": "Idle01",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 1,
+      "Name": "FlyForward",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 2,
+      "Name": "BasicAttack",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 3,
+      "Name": "TakeOff",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 4,
+      "Name": "Land",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 5,
+      "Name": "Scream",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 6,
+      "Name": "ClawAttack",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 7,
+      "Name": "FlameAttack",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 8,
+      "Name": "Defend",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 9,
+      "Name": "Hit",
+      "PlaySpeedFPS": 10.0
+    },
+    {
+      "Id": 10,
+      "Name": "Sleep",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 11,
+      "Name": "Walk",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 12,
+      "Name": "Run",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 13,
+      "Name": "FlyFlame",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 14,
+      "Name": "FlyGlide",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 15,
+      "Name": "Idle02",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 16,
+      "Name": "Die",
+      "PlaySpeedFPS": 30.0
+    },
+    {
+      "Id": 17,
+      "Name": "FlyFloat",
+      "PlaySpeedFPS": 30.0
+    }
+  ]
+}

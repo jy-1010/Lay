@@ -1,0 +1,10 @@
+{
+  "AnimationTemplate": "DragonAnimationJson",
+
+  "Shader": {
+    "VS": "DragonVS",
+    "PS": "DragonPS"
+  },
+
+  "Model": "EnemyDragonModel"
+}

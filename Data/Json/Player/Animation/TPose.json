@@ -1,0 +1,131 @@
+{
+  "Name": "TPose",
+
+  "Priority": 1000,
+  "Layer": 0,
+
+  "Loop": true,
+  "Interruptible": true,
+
+  "BlendTime": 0.0,
+
+  "Mask": [
+    "Head",
+    "Body",
+    "RightArm",
+    "LeftArm",
+    "RightLeg",
+    "LeftLeg"
+  ],
+
+  "Length": 1.0,
+
+  "KeyFrames": [
+    {
+      "Time": 0.0,
+
+      "Parts": {
+        "Head": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "Body": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "RightArm": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 90
+          }
+        },
+
+        "LeftArm": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -90
+          }
+        },
+
+        "RightLeg": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "LeftLeg": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }
+    },
+    {
+      "Time": 1.0,
+
+      "Parts": {
+        "Head": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "Body": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "RightArm": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 90
+          }
+        },
+
+        "LeftArm": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -90
+          }
+        },
+
+        "RightLeg": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "LeftLeg": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "Name": "Swing",
+
+  "Priority": 100,
+  "Layer": 1,
+
+  "Loop": false,
+  "Interruptible": true,
+
+  "BlendTime": 0.08,
+
+  "Mask": [
+    "Body",
+    "Head",
+    "RightArm",
+    "LeftArm"
+  ],
+
+  "Length": 0.35,
+
+  "KeyFrames": [
+    {
+      "Time": 0.0,
+
+      "Parts": {
+        "Body": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "Head": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "RightArm": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "LeftArm": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }
+    },
+
+    {
+      "Time": 0.08,
+
+      "Parts": {
+        "Body": {
+          "Rotation": {
+            "x": 0,
+            "y": 10,
+            "z": 0
+          }
+        },
+
+        "Head": {
+          "Rotation": {
+            "x": 0,
+            "y": -5,
+            "z": 0
+          }
+        },
+
+        "RightArm": {
+          "Rotation": {
+            "x": -40,
+            "y": -15,
+            "z": 0
+          }
+        },
+
+        "LeftArm": {
+          "Rotation": {
+            "x": 5,
+            "y": -10,
+            "z": 0
+          }
+        }
+      }
+    },
+
+    {
+      "Time": 0.16,
+
+      "Parts": {
+        "Body": {
+          "Rotation": {
+            "x": 0,
+            "y": 18,
+            "z": 0
+          }
+        },
+
+        "Head": {
+          "Rotation": {
+            "x": 0,
+            "y": -10,
+            "z": 0
+          }
+        },
+
+        "RightArm": {
+          "Rotation": {
+            "x": -120,
+            "y": -25,
+            "z": 0
+          }
+        },
+
+        "LeftArm": {
+          "Rotation": {
+            "x": 15,
+            "y": -15,
+            "z": 0
+          }
+        }
+      }
+    },
+
+    {
+      "Time": 0.24,
+
+      "Parts": {
+        "Body": {
+          "Rotation": {
+            "x": 0,
+            "y": 10,
+            "z": 0
+          }
+        },
+
+        "Head": {
+          "Rotation": {
+            "x": 0,
+            "y": -3,
+            "z": 0
+          }
+        },
+
+        "RightArm": {
+          "Rotation": {
+            "x": -50,
+            "y": -10,
+            "z": 0
+          }
+        },
+
+        "LeftArm": {
+          "Rotation": {
+            "x": 5,
+            "y": -5,
+            "z": 0
+          }
+        }
+      }
+    },
+
+    {
+      "Time": 0.35,
+
+      "Parts": {
+        "Body": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "Head": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "RightArm": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+
+        "LeftArm": {
+          "Rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }
+    }
+  ]
+}
