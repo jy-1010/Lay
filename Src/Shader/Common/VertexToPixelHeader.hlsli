@@ -26,3 +26,15 @@ struct VertexToPixelShadow
 	float2 uv			: TEXCOORD0;	// テクスチャ座標
 	float4 vwPos		: TEXCOORD1;	// 座標( ビュー座標 )
 };
+
+//剛体のインスタンシング用の頂点構造体
+struct VertexToPixelRigidInstancing
+{
+    float4 svPos : SV_Position; // 座標( プロジェクション空間 )
+    float2 uv : TEXCOORD0; // テクスチャ座標
+	float4 diffuse : COLOR0; // ディフューズカラー
+    float3 worldPos : TEXCOORD1; // ワールド座標
+    float3 worldNormal : TEXCOORD2;
+    float3 worldTangent : TEXCOORD3;
+    float3 worldBinormal : TEXCOORD4;
+};

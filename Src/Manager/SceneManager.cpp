@@ -1,5 +1,4 @@
 #include<DxLib.h>
-#include <EffekseerForDXLib.h>
 #include "DrawTranslucentManager.h"
 #include"SceneManager.h"
 #include"../Application.h"
@@ -143,7 +142,7 @@ void SceneManager::Draw(void)
 	ClearDrawScreen(); // 画面クリア
 	camera_->SetBeforeDraw();
 	// Effekseerにより再生中のエフェクトを更新する。
-	UpdateEffekseer3D();
+	//UpdateEffekseer3D();
 	// Effekseerにより再生中のエフェクトを描画する。
 	for (auto& scene : scenes_) {
 		scene->Draw();

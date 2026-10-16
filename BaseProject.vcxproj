@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Src\Manager\InstanceData.cpp" />
+    <ClCompile Include="Src\Manager\DrawInstancing.cpp" />
     <ClCompile Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdatePlayerAttack.cpp" />
     <ClCompile Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdateTakeFlight.cpp" />
     <ClCompile Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdateLanding.cpp" />
@@ -114,6 +116,8 @@
     <ClCompile Include="Src\Utility\StringUtility.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Manager\InstanceData.h" />
+    <ClInclude Include="Src\Manager\DrawInstancing.h" />
     <ClInclude Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdatePlayerAttack.h" />
     <ClInclude Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdateTakeFlight.h" />
     <ClInclude Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdateLanding.h" />
@@ -232,6 +236,18 @@
     </FxCompile>
     <FxCompile Include="Src\Shader\Model\DragonVS.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Shader\Model\RigidInstancingPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Shader\Model\RigidInstancingVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
     </FxCompile>
     <FxCompile Include="Src\Shader\Polygon\BasePolygonVS.hlsl">

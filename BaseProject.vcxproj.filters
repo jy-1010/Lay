@@ -91,6 +91,11 @@
     <ClCompile Include="Src\Scene\SceneMenu.cpp" />
     <ClCompile Include="Src\Object\Button.cpp" />
     <ClCompile Include="Src\Utility\StringUtility.cpp" />
+    <ClCompile Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdatePlayerAttack.cpp" />
+    <ClCompile Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdateTakeFlight.cpp" />
+    <ClCompile Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdateLanding.cpp" />
+    <ClCompile Include="Src\Manager\DrawInstancing.cpp" />
+    <ClCompile Include="Src\Manager\InstanceData.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Application.h" />
@@ -194,6 +199,11 @@
     <ClInclude Include="Src\Scene\SceneMenu.h" />
     <ClInclude Include="Src\Object\Button.h" />
     <ClInclude Include="Src\Utility\StringUtility.h" />
+    <ClInclude Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdatePlayerAttack.h" />
+    <ClInclude Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdateTakeFlight.h" />
+    <ClInclude Include="Src\Object\Character\Enemy\Dragon\Action\Update\DragonActionUpdateLanding.h" />
+    <ClInclude Include="Src\Manager\DrawInstancing.h" />
+    <ClInclude Include="Src\Manager\InstanceData.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Src\Shader\Polygon\BasePolygonVS.hlsl" />
@@ -204,5 +214,7 @@
     <FxCompile Include="Src\Shader\Polygon\BlocksPS.hlsl" />
     <FxCompile Include="Src\Shader\Model\DragonPS.hlsl" />
     <FxCompile Include="Src\Shader\Model\DragonVS.hlsl" />
+    <FxCompile Include="Src\Shader\Model\RigidInstancingVS.hlsl" />
+    <FxCompile Include="Src\Shader\Model\RigidInstancingPS.hlsl" />
   </ItemGroup>
 </Project>

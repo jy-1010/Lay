@@ -1,6 +1,5 @@
 #include <math.h>
 #include <DxLib.h>
-#include <EffekseerForDXLib.h>
 #include "../Utility/Utility.h"
 #include "../Object/Common/Transform.h"
 #include "../Application.h"
@@ -71,7 +70,7 @@ void Camera::SetBeforeDraw(void)
 	CameraSetting();
 
 	// DXライブラリのカメラとEffekseerのカメラを同期する。
-	Effekseer_Sync3DSetting();
+	//Effekseer_Sync3DSetting();
 
 	//画面中央にマウスを固定
 	if (isSetMousePos_)

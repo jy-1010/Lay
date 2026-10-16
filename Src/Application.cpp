@@ -1,5 +1,4 @@
 #include <DxLib.h>
-#include <EffekseerForDXLib.h>
 #include "Manager/InputManager.h"
 #include "Manager/KeyConfig.h"
 #include "Manager/ResourceManager.h"
@@ -106,8 +105,8 @@ void Application::Destroy(void)
 	KeyConfig::GetInstance().Destroy();
 	ResourceManager::GetInstance().Destroy();
 	KeyMap::GetInstance().Destroy();
-	// Effekseerを終了する。
-	Effkseer_End();
+	//// Effekseerを終了する。
+	//Effkseer_End();
 	// DxLib終了
 	if (DxLib_End() == -1)
 	{
@@ -140,12 +139,12 @@ Application::~Application(void)
 }
 void Application::InitEffekseer(void)
 {
-	if (Effekseer_Init(8000) == -1)
-	{
-		DxLib_End();
-	}
+	//if (Effekseer_Init(8000) == -1)
+	//{
+	//	DxLib_End();
+	//}
 
-	SetChangeScreenModeGraphicsSystemResetFlag(FALSE);
+	//SetChangeScreenModeGraphicsSystemResetFlag(FALSE);
 
-	Effekseer_SetGraphicsDeviceLostCallbackFunctions();
+	//Effekseer_SetGraphicsDeviceLostCallbackFunctions();
 }
