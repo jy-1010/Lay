@@ -131,6 +131,18 @@ VS_OUTPUT ret;
     
     // Diffuse
     ret.diffuse = VSInput.diffuse;
+    
+// ワールド座標からビュー座標へ変換
+    float4 viewPosition;
+    viewPosition.w = 1.0f;
+    viewPosition.xyz = mul(worldPosition, g_base.viewMatrix);
+
+// ビュー座標からプロジェクション座標へ変換
+    float4 clipPosition;
+    clipPosition = mul(viewPosition, g_base.projectionMatrix);
+
+// ラスタライザーへ渡す座標
+    ret.svPos = clipPosition;
 
     return ret;
 }
