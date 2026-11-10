@@ -11,9 +11,6 @@
 #include"../Scene/SceneMenu.h"
 #include"../Scene/SceneGameOver.h"
 #include"../Scene/SceneGameClear.h"
-#include"../Scene/Skin/SceneMakeSkin.h"
-#include"../Scene/Skin/SceneSelectSkin.h"
-#include "../Object/Character/Player/Skin/SkinManager.h"
 #include "../Object/Button.h"
 
 SceneManager* SceneManager::instance_ = nullptr;
@@ -31,10 +28,10 @@ SceneManager::SceneManager(void)
 	fader_ = nullptr;
 	deltaTime_ = 0.0f;
 	DrawTranslucentManager::CreateInstance();
+	
 	//当たり判定管理の初期化(各シーンで追加の可能性があるため)
 	CollisionManager::CreateInstance();
-	//スキンマネージャー
-	SkinManager::CreateInstance();
+
 	//ボタン
 	Button::CreateInstance();
 }
@@ -51,12 +48,6 @@ std::unique_ptr<SceneBase> SceneManager::MakeScene(SCENE_ID id)
 	{
 	case SCENE_ID::TITLE:
 		scene = std::make_unique<SceneTitle>();
-		break;
-	case SCENE_ID::MAKE_SKIN:
-		scene = std::make_unique<SceneMakeSkin>();
-		break;
-	case SCENE_ID::SELECT_SKIN :
-		scene = std::make_unique<SceneSelectSkin>();
 		break;
 	case SCENE_ID::GAME:
 		scene = std::make_unique<SceneGame>();

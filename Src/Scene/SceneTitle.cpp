@@ -264,16 +264,6 @@ void SceneTitle::ChangeScene(void)
 		sceneManager.ChangeScene(SceneManager::SCENE_ID::GAME,true);
 		return;
 	}
-	else if (next == "SkinCreate")
-	{
-		sceneManager.ChangeScene(SceneManager::SCENE_ID::MAKE_SKIN, true);
-		return;
-	}
-	else if (next == "SkinSelect")
-	{
-		sceneManager.ChangeScene(SceneManager::SCENE_ID::SELECT_SKIN, true);
-		return;
-	}
 	else if (next == "Setting")
 	{
 		//現在実装なし

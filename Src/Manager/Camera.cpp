@@ -193,7 +193,6 @@ void Camera::SetDefault(void)
 
 void Camera::SyncFollow(void)
 {
-
 	// “¯Šúæ‚ÌˆÊ’u
 	VECTOR pos = followTransform1_->pos;
 

@@ -16,8 +16,6 @@ public:
 	{
 		NONE
 		,TITLE
-		,MAKE_SKIN
-		,SELECT_SKIN
 		,GAME
 		,GAMEOVER
 		,GAMECLEAR

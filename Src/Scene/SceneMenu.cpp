@@ -206,11 +206,6 @@ void SceneMenu::ChangeScene(void)
 		sceneManager.PopScene();
 		return;
 	}
-	else if (next == "SkinCreate")
-	{
-		sceneManager.JumpScene(SceneManager::SCENE_ID::MAKE_SKIN);
-		return;
-	}
 	else if (next == "Setting")
 	{
 		//現在実装なし
