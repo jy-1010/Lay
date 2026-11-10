@@ -4,73 +4,73 @@
 #include<map>
 #include<functional>
 #include"../../Object/Common/Collider.h"
+#include"../../Object/ObjectBase.h"
+#include"../../Common/Singleton.h"
 
 class Geometry;
 
-class CollisionManager
+class CollisionManager : public Singleton<CollisionManager>
 {
+	//継承元のコンストラクタ等にアクセスするため
+	friend class Singleton<CollisionManager>;
+
 public:
-	/// <summary>
-	/// インスタンス生成
-	/// </summary>
-	/// <param name=""></param>
-	static void CreateInstance(void);
 
-	/// <summary>
-	/// インスタンスの取得
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>インスタンス</returns>
-	static CollisionManager& GetInstance(void) { return *instance_; }
+	//当たり判定をする範囲
+	static constexpr float HIT_RANGE_NORMAL = 1000.0f;	//通常の当たり判定距離
+	static constexpr float HIT_RANGE_OBJECT = 2000.0f;	//オブジェクトの当たり判定距離
+	static constexpr float HIT_RANGE_GROUND = 35000.0f;	//床の当たり判定距離
 
-	/// <summary>
-	/// インスタンス破棄（メモリ解放）
-	/// </summary>
-	static void Destroy(void);
+	//更新用
+	static constexpr int COL_UPDATE_FRAME = 0;		//更新ディレイフレーム
+	
+	//コライダの追加
+	void AddCollider(Collider* _collider);
 
-	/// <summary>
-	/// コライダの追加
-	/// </summary>
-	/// <param name="_collider">コライダ</param>
-	void AddCollider(const std::shared_ptr<Collider> _collider);
+	//コライダの削除
+	void DeleteCollider(Collider* _collider);
 
-	/// <summary>
-	/// 更新
-	/// </summary>
-	/// <param name=""></param>
+	//更新
 	void Update(void);
+
+	//削除
+	void Destroy(void)override;
 
 private:
 
-	//静的インスタンス
-	static CollisionManager* instance_;
-
 	//当たり判定格納
-	std::vector<std::shared_ptr<Collider>>colliders_;
+	std::vector<Collider*>colliders_;
+
+	//当たり判定するフレーム
+	int updateFrame_;
 
 	//コンストラクタ
 	CollisionManager(void);
 
-	//コピーの禁止
-	CollisionManager(const CollisionManager& _copy) = delete;
-	CollisionManager& operator= (const CollisionManager& _copy) = delete;
-
 	//デストラクタ
-	~CollisionManager(void);
+	~CollisionManager(void)override;
 
 	/// <summary>
-	/// 当たり判定をするか(全部当てはまったらtrue)
+	/// コライダーの形状衝突判定
 	/// </summary>
-	/// <param name="_col1">1つ目のコライダ番号</param>
-	/// <param name="_col2">2つ目のコライダ番号</param>
+	/// <param name="_col1">コライダ１</param>
+	/// <param name="_col2">コライダ２</param>
+	void CollisionGeometry(Collider* _col1, Collider* _col2);
+
+	/// <summary>
+	/// タグごとの判定
+	/// </summary>
+	/// <param name="_col1">コライダ１</param>
+	/// <param name="_col2">コライダ２</param>
 	/// <returns>true:当たり判定をする</returns>
-	const bool JudgeIsCollision(const int _col1Num, const int _col2Num)const;
+	const bool CheckCollisionTags(const Collider* _col1, const Collider* _col2)const;
 
 	/// <summary>
-	/// 当たり判定
+	/// 判定前の処理
 	/// </summary>
-	/// <param name="_col1">1つ目のコライダ</param>
-	/// <param name="_col2">2つ目のコライダ</param>
-	/// <returns>true:当たった</returns>
-	const bool IsCollision(const std::weak_ptr<Collider> _col1, const std::weak_ptr<Collider> _col2,VECTOR& hitPos)const;
+	/// <param name="_col1">コライダ１</param>
+	/// <param name="_col2">コライダ２</param>
+	/// <returns>true:当たり判定をする</returns>
+	const bool PreCollision(Collider* _col1, Collider* _col2)const;
 };
+

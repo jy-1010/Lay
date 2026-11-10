@@ -4,7 +4,7 @@ class Capsule :  public Geometry
 {
 public:
 
-	Capsule( VECTOR& pos1, VECTOR& pos2,float radius);
+	Capsule( VECTOR& pos1, VECTOR& pos2,float radius, float broudRadius);
 	~Capsule(void)override;
 
 	void Update(void)override;

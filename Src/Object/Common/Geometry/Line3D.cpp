@@ -5,7 +5,7 @@
 #include "Cylinder.h"
 #include "Line3D.h"
 
-Line3D::Line3D(VECTOR& pos1, VECTOR& pos2):pos1_(pos1),pos2_(pos2)
+Line3D::Line3D(VECTOR& pos1, VECTOR& pos2, float broudRadius):pos1_(pos1),pos2_(pos2), Geometry(broudRadius)
 {
 }
 

@@ -6,7 +6,7 @@
 #include "Triangle3D.h"
 #include "Cylinder.h"
 
-Cylinder::Cylinder(VECTOR& pos, float radius) : pos_(pos), radius_(radius)
+Cylinder::Cylinder(VECTOR& pos, float radius, float broudRadius) : pos_(pos), radius_(radius), Geometry(broudRadius)
 {
 }
 

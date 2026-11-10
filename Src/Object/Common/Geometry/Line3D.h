@@ -1,10 +1,11 @@
 #pragma once
 #include "Geometry.h"
-class Line3D :   public Geometry
+
+class Line3D : public Geometry
 {
 public:
 
-	Line3D(VECTOR& pos1, VECTOR& pos2);
+	Line3D(VECTOR& pos1, VECTOR& pos2, float broudRadius);
 	~Line3D(void)override;
 
 	void Update(void)override;

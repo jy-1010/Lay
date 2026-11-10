@@ -5,14 +5,14 @@
 class Cylinder : public Geometry
 {
 public:
-	Cylinder(VECTOR& pos, float radius);
+	Cylinder(VECTOR& pos, float radius, float broudRadius);
 	~Cylinder(void)override;
 
 	void Update(void)override;
 	void Draw(void)override;
 	GEOMETRY_TYPE GetType(void)override { return GEOMETRY_TYPE::CYLINDER; }
-	VECTOR GetPos(void) { return pos_; }
-	float GetRadius(void) { return radius_; }
+	VECTOR GetPos(void)const { return pos_; }
+	float GetRadius(void)const { return radius_; }
 	void SetRadius(float radius) { radius_ = radius; }
 	/// <summary>
 	/// Œ`ó“–‚½‚è”»’è

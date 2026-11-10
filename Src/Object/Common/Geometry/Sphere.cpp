@@ -6,7 +6,7 @@
 #include "Cylinder.h"
 #include "Sphere.h"
 
-Sphere::Sphere(VECTOR& pos, float radius) : pos_(pos), radius_(radius)
+Sphere::Sphere(VECTOR& pos, float radius) : pos_(pos), radius_(radius), Geometry(radius)
 {
 }
 

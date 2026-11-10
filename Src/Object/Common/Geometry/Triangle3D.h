@@ -5,7 +5,7 @@ class Triangle3D :   public Geometry
 {
 public:
 
-	Triangle3D(VECTOR& pos1,VECTOR& pos2,VECTOR& pos3);
+	Triangle3D(VECTOR& pos1,VECTOR& pos2,VECTOR& pos3, float broudRadius);
 	~Triangle3D(void)override;
 
 	void Update(void)override;

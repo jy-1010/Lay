@@ -1,6 +1,6 @@
 #include "AABB.h"
 
-AABB::AABB(VECTOR& min, VECTOR& max):min_(min),max_(max)
+AABB::AABB(VECTOR& min, VECTOR& max, float broudRadius):min_(min),max_(max),Geometry(broudRadius)
 {
 }
 

@@ -6,7 +6,7 @@
 #include "Capsule.h"
 #include "Cylinder.h"
 
-Capsule::Capsule(VECTOR& pos1, VECTOR& pos2, float radius) : pos1_(pos1), pos2_(pos2), radius_(radius)
+Capsule::Capsule(VECTOR& pos1, VECTOR& pos2, float radius, float broudRadius) : pos1_(pos1), pos2_(pos2), radius_(radius), Geometry(broudRadius)
 {
 }
 

@@ -1,4 +1,5 @@
 #include <DxLib.h>
+#include "Common/SingletonRegistry.h"
 #include "Manager/InputManager.h"
 #include "Manager/KeyConfig.h"
 #include "Manager/ResourceManager.h"
@@ -105,6 +106,13 @@ void Application::Destroy(void)
 	KeyConfig::GetInstance().Destroy();
 	ResourceManager::GetInstance().Destroy();
 	KeyMap::GetInstance().Destroy();
+
+	// シングルトンの破棄
+	SingletonRegistry::GetInstance().DeleteAll();
+
+	//シングルトン管理の破棄
+	SingletonRegistry::GetInstance().DeleteSelfInstance();
+
 	//// Effekseerを終了する。
 	//Effkseer_End();
 	// DxLib終了

@@ -1,110 +1,122 @@
 #pragma once
-#include <vector>
-#include <memory>
-#include "Geometry/Geometry.h"
 
+#include<set>
+#include"Geometry/Geometry.h"
+
+class CollisionManager;
 class ObjectBase;
 
 class Collider
 {
-public:
+public :
 
 	// 衝突用タグ
 	enum class TAG
 	{
-		PLAYER,			//プレイヤー
-		PLAYER_ATTACK_SWORD,	//プレイヤーの攻撃
-		PLAYER_ATTACK_ARROW,	//プレイヤーの攻撃
-		ENEMY,			//敵
-		ENEMY_ATTACK,	//敵の攻撃
+		//-----------------------------------------------------------------
+		// 追加後は必ずマネージャーにて当たり判定範囲を設定してください
+		//-----------------------------------------------------------------
+
+		PLAYER1 = 0,	//プレイヤー1
+		PLAYER2 = 1,	//プレイヤー2
+		PLAYER3 = 2,	//プレイヤー3
+		PLAYER4 = 3,	//プレイヤー4
+
+		FOOT,			//足元
+
+		SPIN,			//スピンアタック
+		CANNON_SHOT,	//大砲の弾
+		SEARCH,			//索敵判定
+
+		MACHINE,		//機体
+		MACHINE_RIDE,	//機体の乗り判定
+
+		NORMAL_OBJECT,	//通常オブジェ
+		GROUND,			//地面
+		TREE,			//木
+		GLIDE_STAGE,	//エアグライダーの着地判定
+
+		ITEM_BOX,		//アイテムボックス
+		POWER_UP,		//パワーアップアイテム
+		BATTLE_ITEM,	//バトルアイテム
+
+		WORLD_BORDER,	//ワールドボーダー
+		GLIDER_BORDER,	//グライダー用のワールドボーダー
+
+		MAX				//タグの数管理用	※タグに使わないでください
 	};
 
 	/// <summary>
 	/// コンストラクタ
 	/// </summary>
-	/// <param name="_tags">自身の衝突用タグ</param>
+	/// <param name="_owner">親情報</param>
+	/// <param name="_tag">自身の衝突用タグ</param>
 	/// <param name="_geometry">当たり判定の形状</param>
 	/// <param name="_notHitTags">衝突させないタグ</param>
-	Collider(ObjectBase& parent, TAG tag, Geometry& geometry, std::vector<TAG> notHitTags = {});
+	/// <param name="_colMng">自己格納用のマネージャー</param>
+	Collider(ObjectBase& _owner, const TAG _tag, std::unique_ptr<Geometry> _geometry, const std::set<TAG> _notHitTags);
 
-	/// <summary>
-	/// デストラクタ
-	/// </summary>
-	/// <param name=""></param>
+	// デストラクタ
 	~Collider(void);
 
-	/// <summary>
-	/// 衝突用タグの取得
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>衝突用タグ</returns>
-	inline const TAG GetTag(void)const { return tag_; }
+	//衝突用タグの取得
+	inline const TAG GetTag(void)const { return myTag_; }
 
-	/// <summary>
-	/// 当たり判定の形状を取得
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>当たり判定形状</returns>
-	inline Geometry& GetGeometry(void)const { return geometry_; }
+	//当たり判定の形状を取得
+	inline Geometry& GetGeometry(void)const { return *geometry_; }
 
-	/// <summary>
-	/// 衝突させないタグの取得
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>衝突させないタグ</returns>
-	inline const std::vector<TAG> GetNotHitTags(void)const { return notHitTags_; }
+	//衝突させないタグの取得
+	inline const std::set<TAG>& GetNotHitTags(void)const { return notHitTags_; }
 
-	/// <summary>
-	/// 親を取得
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>親オブジェクト</returns>
-	inline  ObjectBase& GetParent(void)const { return parent_; }
+	//所持者を取得
+	inline const ObjectBase& GetOwner(void)const { return owner_; }
 
-	/// <summary>
-	/// 当たり判定の取得
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>当たり判定(true:当たった)</returns>
+	//当たったかの判定の取得
 	inline const bool IsHit(void)const { return isHit_; }
 
-	/// <summary>
-	/// 終了判定の取得
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>終了判定(true:終了)</returns>
-	inline const bool IsDead(void)const { return isDead_; }
+	//有効判定の取得
+	inline const bool IsEnabled(void)const { return isEnabled_; }
 
-
-	/// <summary>
-	/// 終了処理(所持者の解放時に置く)
-	/// </summary>
-	/// <param name=""></param>
-	inline void Kill(void) { isDead_ = true; }
+	//終了処理(所持者の解放時に置く)
+	void SetIsEnabled(const bool _isEnabled) {isEnabled_ = _isEnabled; }
 
 	/// <summary>
 	/// 当たった時の処理
-	///	 </summary>
-	// <param name="_collider">相手のコライダ</param>
-	void OnHit(const std::weak_ptr<Collider> _collider,VECTOR hitPos);
+	/// </summary>
+	/// <param name="_collider">相手のコライダ</param>
+	void OnHit(const Collider* _collider);
+
+	/// <summary>
+	/// 指定されたタグが自分の衝突用タグに含まれているか
+	/// </summary>
+	/// <param name="_tags">指定タグ群</param>
+	/// <returns>true:含まれている</returns>
+	const bool IsIncludeMyTag(const std::set<TAG>& _tags)const;
+
+	/// <summary>
+	/// 指定されたタグが自分の衝突させないタグに含まれているか
+	/// </summary>
+	/// <param name="_tags">指定タグ群</param>
+	/// <returns>true:含まれている</returns>
+	const bool IsIncludeNotHitTag(const std::set<TAG>& _tags)const;
+
 private:
 
-	//親
-	ObjectBase& parent_;
+	//所持者
+	ObjectBase& owner_;
 
-	TAG tag_;
+	// 自身の衝突用タグ
+	TAG myTag_;
 
 	// 衝突しないタグ
-	std::vector<TAG> notHitTags_;
+	std::set<TAG> notHitTags_;
 
 	//当たり判定の形状
-	Geometry& geometry_;
+	std::unique_ptr<Geometry> geometry_;
 
 	//当たったかの判定
 	bool isHit_;
 
-
-	//終了判定
-	bool isDead_;
+	//有効判定
+	bool isEnabled_;
 };
-

@@ -5,7 +5,7 @@ class AABB :   public Geometry
 {
 public:
 
-	AABB(VECTOR& min, VECTOR& max);
+	AABB(VECTOR& min, VECTOR& max, float broudRadius);
 	~AABB(void)override;
 
 	void Update(void)override;

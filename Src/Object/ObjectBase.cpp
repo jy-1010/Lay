@@ -1,41 +1,61 @@
 #include "../Manager/CollisionManager.h"
-#include "Common/Collider.h"
+#include "../Renderer/ModelRenderer.h"
 #include "ObjectBase.h"
+
+ObjectBase::ObjectBase(void)
+{
+	//モデル用頂点シェーダー
+	//modelRenderer_ = std::make_unique<ModelRenderer>();
+}
 
 ObjectBase::~ObjectBase(void)
 {
-	for (auto& colParam : colParam_)
+	for (auto& collider : collider_)
 	{
 		//所持している全コライダの削除
-		colParam.collider_->Kill();
+		collider->SetIsEnabled(false);
 	}
 
-	//当たり判定情報の削除
-	colParam_.clear();
+	collider_.clear();
 }
 
-void ObjectBase::UIDraw(void)
+void ObjectBase::ChangeModelColor(const COLOR_F _colorScale)
 {
+	if (MV1SetDifColorScale(trans_.modelId, _colorScale))
+	{
+#ifdef _DEBUG
+
+		OutputDebugString("ChangeModelColorの失敗");
+
+#endif // _DEBUG
+	}
 }
 
-void ObjectBase::OnHit(const std::weak_ptr<Collider> _hitCol, VECTOR hitPos)
+void ObjectBase::MakeCollider(const Collider::TAG& _tag, std::unique_ptr<Geometry> _geometry, const std::set<Collider::TAG> _notHitTags)
 {
-}
-
-void ObjectBase::MakeCollider(Collider::TAG _tag, std::unique_ptr<Geometry> _geometry, const std::vector<Collider::TAG> _notHitTags)
-{
-	//当たり判定情報
-	ColParam colParam;
-
-	//形状情報の挿入
-	colParam.geometry_ = std::move(_geometry);
-
 	//情報を使ってコライダの作成
-	colParam.collider_ = std::make_shared<Collider>(*this, _tag, *colParam.geometry_, _notHitTags);
+	std::unique_ptr<Collider> collider = std::make_unique<Collider>(*this, _tag, std::move(_geometry), _notHitTags);
 
-	//コライダを管理マネージャーに追加
-	CollisionManager::GetInstance().AddCollider(colParam.collider_);
+	//配列に格納
+	collider_.push_back(std::move(collider));
+}
 
-	//配列にセット
-	colParam_.push_back(std::move(colParam));
+void ObjectBase::SetIsEnabledByTag(const Collider::TAG& _tag, const bool _isEnabled)
+{
+	for (auto& collider : collider_)
+	{
+		//そのコライダが存在しない　又は　指定タグと違う
+		if (collider == nullptr || collider->GetTag() != _tag)continue;
+		collider->SetIsEnabled(_isEnabled);
+	}
+}
+
+void ObjectBase::SetIsEnabledByAll(const bool _isEnabled)
+{
+	for (auto& collider : collider_)
+	{
+		//そのコライダが存在しない
+		if (collider == nullptr)continue;
+		collider->SetIsEnabled(_isEnabled);
+	}
 }

@@ -30,7 +30,7 @@ SceneManager::SceneManager(void)
 	DrawTranslucentManager::CreateInstance();
 	
 	//当たり判定管理の初期化(各シーンで追加の可能性があるため)
-	CollisionManager::CreateInstance();
+	CollisionManager::CreateInstance(SingletonRegistry::DESTROY_TIMING::ALL_END);
 
 	//ボタン
 	Button::CreateInstance();

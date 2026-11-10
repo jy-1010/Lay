@@ -1,6 +1,7 @@
 #include<DxLib.h>
 #include"../Application.h"
 #include "../Utility/Utility.h"
+#include "../Common/SingletonRegistry.h"
 #include"../Manager/SceneManager.h"
 #include"../Manager/CollisionManager.h"
 #include"../Manager/ResourceManager.h"
@@ -8,20 +9,23 @@
 #include"../Manager/InputManager.h"
 #include"../Manager/KeyConfig.h"
 #include"../Manager/Camera.h"
+#include"../Object/Player/PlayerManager.h"
 #include"SceneGame.h"
 
 SceneGame::SceneGame(void)
 {
 	auto& camera = SceneManager::GetInstance().GetCamera();
-	camera.ChangeMode(Camera::MODE::FOLLOW);
-	//camera.SetFollow(player_->GetHeadTransform().lock());
-	camera.SetIsMousePos(true);
+	camera.ChangeMode(Camera::MODE::FIXED_DIAGONAL);
+	//camera.SetIsMousePos(true);
 }
 
 SceneGame::~SceneGame(void)
 {
 	auto& camera = SceneManager::GetInstance().GetCamera();
 	camera.SetIsMousePos(false);
+
+	//ゲーム終了時に破棄するシングルトンを削除
+	SingletonRegistry::GetInstance().Delete(SingletonRegistry::DESTROY_TIMING::GAME_END);
 }
 
 
@@ -29,6 +33,10 @@ SceneGame::~SceneGame(void)
 bool SceneGame::Init(void)
 {
 	SceneBase::Init();
+
+	//プレイヤーの生成
+	PlayerManager::CreateInstance(SingletonRegistry::DESTROY_TIMING::GAME_END);
+	PlayerManager::GetInstance().Init();
 	
 	return true;
 }
@@ -56,6 +64,7 @@ void SceneGame::Update(void)
 	}
 	UpdateIsPose();
 	CollisionManager::GetInstance().Update();
+	PlayerManager::GetInstance().Update();
 }
 
 //描画処理
@@ -65,6 +74,8 @@ void SceneGame::Draw(void)
 	{
 		DrawRotaGraph(Application::SCREEN_HALF_X, Application::SCREEN_HALF_Y, 1.0f, 0.0f, ResourceManager::GetInstance().GetImageResource("CrossHairImage").lock()->GetHandleId(), true);
 	}
+
+	PlayerManager::GetInstance().Draw();
 }
 
 void SceneGame::DebugDraw(void)

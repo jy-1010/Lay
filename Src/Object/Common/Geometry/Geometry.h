@@ -22,12 +22,13 @@ public:
 		AABB_CUBE,		//‰ñ“]‚È‚µ” 
 	};
 
-	Geometry(void) = default;
+	Geometry(const float _broudRadius) : broudRadius_(_broudRadius) {}
 	virtual ~Geometry(void) = default;
 
 	virtual void Update(void) = 0;
 	virtual void Draw(void) = 0;
 	virtual GEOMETRY_TYPE GetType(void) = 0;
+	const float GetBroudRadius(void)const { return broudRadius_; }
 
 	/// <summary>
 	/// Œ`ó“–‚½‚è”»’è
@@ -95,5 +96,7 @@ public:
 
 protected:
 	static constexpr int DRAW_COLOR = 0xff00ff;
+
+	float broudRadius_;	//“–‚½‚è”»’è‚Ì‘å‚«‚³
 };
 
